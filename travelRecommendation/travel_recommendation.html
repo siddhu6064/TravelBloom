@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Explore Dream Destinations</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <script src="https://kit.fontawesome.com/730a5a3875.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✈️ TravelBloom</div>
+            <ul class="nav-links">
+                <li><a href="travel_recommendation.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button onclick="searchRecommendations()">Search</button>
+                <button class="clear-btn" onclick="clearResults()">Reset</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="social-media">
+            <a href="#" title="Twitter" class="twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" title="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="hero-content">
+            <h1>Explore<br>Dream<br>Destination</h1>
+            <p>Where your travel dreams come to life and every destination becomes a story worth telling. Connect with the world's most beautiful places and create moments that will stay with you forever.</p>
+            <button class="book-btn">BOOK NOW</button>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <div id="recommendationsSection" class="recommendations hidden">
+        <div class="container">
+            <h2>Recommendations</h2>
+            <div id="recommendationResults"></div>
+        </div>
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

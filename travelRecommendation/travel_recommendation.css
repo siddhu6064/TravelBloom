@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.search-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background: #45a049;
+}
+
+.clear-btn {
+    background: #f44336 !important;
+}
+
+.clear-btn:hover {
+    background: #da190b !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://i.postimg.cc/SYS6QcRv/view-on-manhattan-at-night-new-york-city-header-141511.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.book-btn {
+    padding: 1rem 2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-btn:hover {
+    background: #45a049;
+}
+
+/* Social Media Icons - Global for all pages */
+.social-media {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 999;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-media a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(5px);
+}
+
+/* Individual Social Media Platform Hover Colors */
+.social-media .twitter:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.social-media .facebook:hover {
+    background: rgba(24, 119, 242, 0.3);
+}
+
+.social-media .instagram:hover {
+    background: rgba(225, 48, 108, 0.3);
+}
+
+.social-media .youtube:hover {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+/* Page Sections */
+.page-section {
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://i.postimg.cc/SYS6QcRv/view-on-manhattan-at-night-new-york-city-header-141511.jpg') center/cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Us Styles */
+.about-content {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.team-section {
+    margin-top: 3rem;
+}
+
+.team-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.team-member h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Us Styles */
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.contact-content {
+    flex: 1;
+    color: white;
+}
+
+.contact-content h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: normal;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 2.5rem;
+    background: rgba(14, 165, 233, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-form h2 {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid rgba(255,255,255,0.8);
+    background: rgba(255,255,255,1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: rgba(34, 197, 94, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+/* Recommendations Styles */
+.recommendations {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.recommendations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.recommendation-item {
+    display: flex;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.recommendation-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recommendation-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.recommendation-content h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.recommendation-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.time-info {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .social-media {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        top: auto;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .social-media a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .recommendation-item {
+        flex-direction: column;
+    }
+
+    .recommendation-item img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .search-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-container input {
+        width: 150px;
+    }
+
+    .about-content h2,
+    .contact-form h2,
+    .recommendations h2 {
+        font-size: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-section {
+        padding: 80px 1rem 2rem;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .contact-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
