@@ -128,13 +128,35 @@ function searchRecommendations() {
         results = travelData.beaches;
     } else if (searchTerm.includes('temple') || searchTerm.includes('temples')) {
         results = travelData.temples;
-    } else if (searchTerm.includes('country') || searchTerm.includes('countries') || 
-               searchTerm.includes('australia') || searchTerm.includes('japan') || 
-               searchTerm.includes('brazil')) {
-        // Flatten countries data
+    } else if (searchTerm.includes('country') || searchTerm.includes('countries')) {
+        // Show all countries when searching for general "country" term
         travelData.countries.forEach(country => {
             results = results.concat(country.cities);
         });
+    } else if (searchTerm.includes('australia')) {
+        // Show only Australia cities
+        const australiaCountry = travelData.countries.find(country => 
+            country.name.toLowerCase() === 'australia'
+        );
+        if (australiaCountry) {
+            results = australiaCountry.cities;
+        }
+    } else if (searchTerm.includes('japan')) {
+        // Show only Japan cities
+        const japanCountry = travelData.countries.find(country => 
+            country.name.toLowerCase() === 'japan'
+        );
+        if (japanCountry) {
+            results = japanCountry.cities;
+        }
+    } else if (searchTerm.includes('brazil')) {
+        // Show only Brazil cities
+        const brazilCountry = travelData.countries.find(country => 
+            country.name.toLowerCase() === 'brazil'
+        );
+        if (brazilCountry) {
+            results = brazilCountry.cities;
+        }
     } else {
         // Search all categories for other terms
         results = [
@@ -272,5 +294,5 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Available data:', travelData);
     
     // You can uncomment this line to load data from JSON file instead
-    //fetchTravelData().then(data => console.log('Data loaded:', data));
+    // fetchTravelData().then(data => console.log('Data loaded:', data));
 });
